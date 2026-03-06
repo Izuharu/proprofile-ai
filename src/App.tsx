@@ -20,6 +20,13 @@ import { Attire, Background, Mood, AspectRatio, CameraAngle, EyeContact, Generat
 import { getCroppedImg } from './canvasUtils';
 import { ATTIRE_IMAGES, BACKGROUND_IMAGES } from './constants';
 
+const ATTIRE_PROMPTS: Record<Attire, string> = {
+  [Attire.FORMAL_SUIT]: "Formal Suit",
+  [Attire.BUSINESS_CASUAL]: "Business Casual",
+  [Attire.SMART_CASUAL]: "Smart Casual",
+  [Attire.TECH_FOUNDER]: "Hoodie and t-shirt",
+};
+
 // Initialize Gemini API
 const genAI = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || '' });
 
@@ -88,7 +95,7 @@ export default function App() {
     try {
       const base64Data = croppedImage.split(',')[1];
       const prompt = `Transform this person into a professional business profile picture. 
-        Attire: ${selectedPreset.attire}. 
+        Attire: ${ATTIRE_PROMPTS[selectedPreset.attire]}. 
         Background: ${selectedPreset.background}. 
         Mood: ${selectedPreset.mood}. 
         Camera Angle: ${selectedPreset.cameraAngle}.
