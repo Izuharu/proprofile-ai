@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-linkedin: #0077B5;
+  --color-linkedin-dark: #005582;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-md bg-white/70 border border-white/20 shadow-lg;
+  }
+  
+  .glass-dark {
+    @apply backdrop-blur-md bg-slate-900/70 border border-white/10 shadow-lg;
+  }
+}

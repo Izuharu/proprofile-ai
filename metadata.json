@@ -1,0 +1,5 @@
+{
+  "name": "ProProfile AI",
+  "description": "Generate professional business profile pictures for LinkedIn and CVs using AI.",
+  "requestFramePermissions": ["camera"]
+}
