@@ -584,9 +584,13 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="p-6 text-center">
+      <footer className="p-8 text-center space-y-3">
         <p className="text-[10px] text-slate-400 uppercase tracking-[0.2em] font-bold">
           Powered by Gemini 2.5 Flash Image
+        </p>
+        <div className="h-px w-8 bg-slate-200 mx-auto" />
+        <p className="text-[10px] text-slate-400 uppercase tracking-[0.2em] font-bold">
+          © 2026 ProProfile AI. Build by <span className="text-linkedin">Vangart Lab.</span>
         </p>
       </footer>
     </div>
