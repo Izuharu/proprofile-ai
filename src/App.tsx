@@ -104,7 +104,7 @@ export default function App() {
         The output should be a single, high-quality, centered headshot.`;
 
       const response = await genAI.models.generateContent({
-        model: 'gemini-2.5-flash-image',
+        model: 'gemini-3.1-flash-image-preview',
         contents: {
           parts: [
             {
@@ -119,6 +119,7 @@ export default function App() {
         config: {
           imageConfig: {
             aspectRatio: selectedPreset.aspectRatio as any,
+            imageSize: '1K',
           }
         }
       });
@@ -586,7 +587,7 @@ export default function App() {
       {/* Footer */}
       <footer className="p-8 text-center space-y-3">
         <p className="text-[10px] text-slate-400 uppercase tracking-[0.2em] font-bold">
-          Powered by Gemini 2.5 Flash Image
+          Powered by Gemini 3.1 Flash Image
         </p>
         <div className="h-px w-8 bg-slate-200 mx-auto" />
         <p className="text-[10px] text-slate-400 uppercase tracking-[0.2em] font-bold">
